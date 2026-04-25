@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${pageTitle}, ${metaDescription})}"></head>
+<body>
+
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="hero-badge mb-3"><i class="bi bi-droplet-fill me-1"></i> Premium Alkaline Water</div>
+                <h1 class="page-hero-title">Our Products</h1>
+                <p class="page-hero-subtitle">Pure, pH-balanced alkaline water in three convenient sizes. All bottles are tamper-proof, BPA-free, recyclable, and BIS certified.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Feature Highlights -->
+<section class="py-4 bg-white border-bottom">
+    <div class="container">
+        <div class="row g-3 text-center">
+            <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-droplet-fill text-primary-custom fs-5"></i>
+                    <span class="fw-500">pH 8.5 Alkaline</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-lock-fill text-primary-custom fs-5"></i>
+                    <span class="fw-500">Tamper-Proof Seal</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-recycle text-success-custom fs-5"></i>
+                    <span class="fw-500">100% Recyclable</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-award-fill text-warning-custom fs-5"></i>
+                    <span class="fw-500">BIS Certified</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Choose Your Size</div>
+            <h2 class="section-title">Our Product Range</h2>
+            <p class="section-subtitle">Every bottle delivers the same exceptional quality — just in the size that works best for you.</p>
+        </div>
+
+        <div class="row g-4">
+            <th:block th:each="product, stat : ${products}">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" th:attr="data-aos-delay=${stat.index * 100}">
+                    <div class="product-detail-card" th:classappend="${stat.index == 1 ? 'product-featured' : ''}">
+                        <th:block th:if="${stat.index == 1}">
+                            <div class="featured-badge">Most Popular</div>
+                        </th:block>
+                        <div class="product-card-header">
+                            <div class="product-size-tag" th:text="${product.sizeLabel}">500ml</div>
+                            <img th:src="@{/images/Gemini_Generated_Image_vh7820vh7820vh78-removebg-preview.png}"
+                                 th:alt="${product.name}" class="product-detail-img"/>
+                        </div>
+                        <div class="product-card-content">
+                            <h3 class="product-title" th:text="${product.name}">Product</h3>
+                            <p class="product-description" th:text="${product.description}">Description</p>
+
+                            <!-- Features -->
+                            <div class="product-features">
+                                <h6 class="features-title">Key Features</h6>
+                                <ul class="features-list list-unstyled">
+                                    <li th:each="feature : ${product.features}" class="feature-item">
+                                        <i class="bi bi-check-circle-fill text-success-custom me-2"></i>
+                                        <span th:text="${feature}">Feature</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Price -->
+                            <div class="product-price-row">
+                                <div class="price-display">
+                                    <span class="price-label">MRP</span>
+                                    <span class="price-amount">
+                                        <span class="currency">&#8377;</span>
+                                        <span th:text="${product.price}">25</span>
+                                    </span>
+                                </div>
+                                <div class="stock-badge" th:if="${product.inStock}">
+                                    <i class="bi bi-check-circle me-1"></i>In Stock
+                                </div>
+                            </div>
+
+                            <a href="/contact" class="btn btn-primary-custom w-100 mt-3">
+                                <i class="bi bi-bag-plus me-2"></i>Order Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Table -->
+<section class="section-padding bg-light-blue">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Simple Pricing</div>
+            <h2 class="section-title">Transparent Pricing Table</h2>
+            <p class="section-subtitle">No hidden charges. What you see is what you pay.</p>
+        </div>
+        <div class="pricing-table-wrapper" data-aos="fade-up">
+            <table class="table pricing-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Size</th>
+                        <th>pH Level</th>
+                        <th>Packaging</th>
+                        <th>MRP (INR)</th>
+                        <th>Bulk Discount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="product : ${products}">
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <img th:src="@{/images/Gemini_Generated_Image_vh7820vh7820vh78-removebg-preview.png}"
+                                     th:alt="${product.name}" width="32" height="40" style="object-fit:contain;"/>
+                                <span th:text="${product.name}">Name</span>
+                            </div>
+                        </td>
+                        <td><span class="size-tag" th:text="${product.sizeLabel}">500ml</span></td>
+                        <td><span class="ph-badge">pH 8.5</span></td>
+                        <td>BPA-Free PET, Recyclable</td>
+                        <td><strong>&#8377;<span th:text="${product.price}">25</span></strong></td>
+                        <td><span class="discount-badge">Available on bulk</span></td>
+                        <td>
+                            <a href="/contact" class="btn btn-sm btn-primary-custom">
+                                <i class="bi bi-bag me-1"></i>Buy Now
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-muted"><i class="bi bi-info-circle me-1"></i>For bulk orders, distributor pricing, or export inquiries, please <a href="/contact" class="text-primary-custom">contact us</a>.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Packaging Details -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Packaging Excellence</div>
+            <h2 class="section-title">Built for Safety &amp; Sustainability</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3 col-6" data-aos="fade-up">
+                <div class="packaging-card text-center">
+                    <i class="bi bi-lock-fill packaging-icon"></i>
+                    <h6>Tamper-Proof</h6>
+                    <p class="small">Tamper-evident seal for guaranteed freshness</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="packaging-card text-center">
+                    <i class="bi bi-recycle packaging-icon"></i>
+                    <h6>Recyclable</h6>
+                    <p class="small">100% recyclable food-grade PET plastic</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="packaging-card text-center">
+                    <i class="bi bi-shield-fill-check packaging-icon"></i>
+                    <h6>BPA-Free</h6>
+                    <p class="small">No harmful chemicals leach into the water</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="packaging-card text-center">
+                    <i class="bi bi-globe-asia-australia packaging-icon"></i>
+                    <h6>Export-Ready</h6>
+                    <p class="small">Meets international packaging standards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

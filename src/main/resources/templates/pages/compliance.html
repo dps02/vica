@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${pageTitle}, ${metaDescription})}"></head>
+<body>
+
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="hero-badge mb-3"><i class="bi bi-patch-check-fill me-1"></i> Quality &amp; Compliance</div>
+                <h1 class="page-hero-title">Certified Excellence</h1>
+                <p class="page-hero-subtitle">Our commitment to quality is backed by internationally recognized certifications and a rigorous, multi-stage quality control process.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Our Certifications</div>
+            <h2 class="section-title">Recognized Standards We Hold</h2>
+            <p class="section-subtitle">Every certification represents our unwavering commitment to safety, quality, and responsibility.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="cert-card">
+                    <div class="cert-seal">
+                        <i class="bi bi-award-fill"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h4>BIS Certification</h4>
+                        <p class="cert-subtitle">Bureau of Indian Standards</p>
+                        <p>Our packaged drinking water conforms to IS 14543 standards set by the Bureau of Indian Standards, guaranteeing quality and safety for Indian consumers.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">IS 14543</span>
+                            <span class="cert-tag">Packaged Water</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-card">
+                    <div class="cert-seal cert-seal-green">
+                        <i class="bi bi-shield-fill-check"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h4>ISO 9001:2015</h4>
+                        <p class="cert-subtitle">Quality Management System</p>
+                        <p>Certified under ISO 9001:2015, our quality management system ensures consistent processes, continuous improvement, and customer satisfaction.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">ISO 9001</span>
+                            <span class="cert-tag">QMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-card">
+                    <div class="cert-seal cert-seal-eco">
+                        <i class="bi bi-leaf-fill"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h4>Eco-Label Certified</h4>
+                        <p class="cert-subtitle">Environmental Compliance</p>
+                        <p>Our packaging carries eco-label certification, recognizing our use of recyclable, environmentally responsible materials and production processes.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Recyclable</span>
+                            <span class="cert-tag">BPA-Free</span>
+                            <span class="cert-tag">Eco-Label</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-card">
+                    <div class="cert-seal">
+                        <i class="bi bi-file-earmark-check-fill"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h4>FSSAI Licensed</h4>
+                        <p class="cert-subtitle">Food Safety Standards Authority</p>
+                        <p>Our manufacturing facility holds a valid FSSAI license ensuring full compliance with India's food safety and standards regulations.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">FSSAI</span>
+                            <span class="cert-tag">Food Safety</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="cert-card">
+                    <div class="cert-seal cert-seal-green">
+                        <i class="bi bi-globe2"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h4>Export Compliance</h4>
+                        <p class="cert-subtitle">International Standards</p>
+                        <p>Our packaging and product meet international export standards, making Vica Hydrate suitable for distribution across global markets.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">Export Ready</span>
+                            <span class="cert-tag">International</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="cert-card">
+                    <div class="cert-seal cert-seal-eco">
+                        <i class="bi bi-droplet-half"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h4>Water Quality Testing</h4>
+                        <p class="cert-subtitle">NABL Accredited Labs</p>
+                        <p>Regular batch testing is conducted at NABL-accredited laboratories to verify pH levels, mineral content, microbiological safety, and overall water quality.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">NABL</span>
+                            <span class="cert-tag">Lab Tested</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quality Process Flowchart -->
+<section class="section-padding bg-light-blue">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Our Process</div>
+            <h2 class="section-title">From Source to Shelf</h2>
+            <p class="section-subtitle">Our 12-stage purification and quality control process ensures every bottle meets our strict standards.</p>
+        </div>
+        <div class="process-flow" data-aos="fade-up">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-icon"><i class="bi bi-water"></i></div>
+                <div class="step-content">
+                    <h5>Source Water</h5>
+                    <p>Raw water sourced and collected under controlled conditions</p>
+                </div>
+            </div>
+            <div class="process-connector"><i class="bi bi-arrow-right"></i></div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-icon"><i class="bi bi-funnel-fill"></i></div>
+                <div class="step-content">
+                    <h5>Pre-Filtration</h5>
+                    <p>Sand &amp; activated carbon filtration removes sediment and odors</p>
+                </div>
+            </div>
+            <div class="process-connector"><i class="bi bi-arrow-right"></i></div>
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-icon"><i class="bi bi-virus2"></i></div>
+                <div class="step-content">
+                    <h5>RO Purification</h5>
+                    <p>Reverse osmosis removes dissolved solids, bacteria, and viruses</p>
+                </div>
+            </div>
+            <div class="process-connector"><i class="bi bi-arrow-right"></i></div>
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-icon"><i class="bi bi-droplet-fill"></i></div>
+                <div class="step-content">
+                    <h5>Alkaline Ionization</h5>
+                    <p>Mineral enhancement raises pH to optimal 8.5 level</p>
+                </div>
+            </div>
+            <div class="process-connector process-connector-down"><i class="bi bi-arrow-down"></i></div>
+            <div class="process-step process-step-bottom">
+                <div class="step-number">08</div>
+                <div class="step-icon"><i class="bi bi-box-seam-fill"></i></div>
+                <div class="step-content">
+                    <h5>Seal &amp; Dispatch</h5>
+                    <p>Tamper-proof sealed and quality-checked before dispatch</p>
+                </div>
+            </div>
+            <div class="process-connector process-connector-bottom"><i class="bi bi-arrow-left"></i></div>
+            <div class="process-step process-step-bottom">
+                <div class="step-number">07</div>
+                <div class="step-icon"><i class="bi bi-printer-fill"></i></div>
+                <div class="step-content">
+                    <h5>Labelling</h5>
+                    <p>FSSAI-compliant labels with all regulatory information</p>
+                </div>
+            </div>
+            <div class="process-connector process-connector-bottom"><i class="bi bi-arrow-left"></i></div>
+            <div class="process-step process-step-bottom">
+                <div class="step-number">06</div>
+                <div class="step-icon"><i class="bi bi-bottle"></i></div>
+                <div class="step-content">
+                    <h5>Bottling</h5>
+                    <p>Automated filling into sterile BPA-free PET bottles</p>
+                </div>
+            </div>
+            <div class="process-connector process-connector-bottom"><i class="bi bi-arrow-left"></i></div>
+            <div class="process-step process-step-bottom">
+                <div class="step-number">05</div>
+                <div class="step-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                <div class="step-content">
+                    <h5>UV Sterilization</h5>
+                    <p>UV light treatment eliminates remaining microorganisms</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Standards Compliance Table -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Standards Compliance</div>
+            <h2 class="section-title">Water Quality Parameters</h2>
+        </div>
+        <div class="table-responsive" data-aos="fade-up">
+            <table class="table compliance-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>BIS Standard (IS 14543)</th>
+                        <th>Vica Hydrate Value</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>pH Level</td>
+                        <td>6.5 – 8.5</td>
+                        <td><strong>8.5</strong></td>
+                        <td><span class="status-pass"><i class="bi bi-check-circle-fill me-1"></i>Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Dissolved Solids (TDS)</td>
+                        <td>≤ 500 mg/L</td>
+                        <td><strong>&lt; 150 mg/L</strong></td>
+                        <td><span class="status-pass"><i class="bi bi-check-circle-fill me-1"></i>Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>Turbidity</td>
+                        <td>≤ 1 NTU</td>
+                        <td><strong>&lt; 0.1 NTU</strong></td>
+                        <td><span class="status-pass"><i class="bi bi-check-circle-fill me-1"></i>Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Coliform</td>
+                        <td>Absent in 100mL</td>
+                        <td><strong>Absent</strong></td>
+                        <td><span class="status-pass"><i class="bi bi-check-circle-fill me-1"></i>Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>E. Coli</td>
+                        <td>Absent in 100mL</td>
+                        <td><strong>Absent</strong></td>
+                        <td><span class="status-pass"><i class="bi bi-check-circle-fill me-1"></i>Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>Nitrate</td>
+                        <td>≤ 45 mg/L</td>
+                        <td><strong>&lt; 5 mg/L</strong></td>
+                        <td><span class="status-pass"><i class="bi bi-check-circle-fill me-1"></i>Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>Heavy Metals (Lead, Arsenic)</td>
+                        <td>As per BIS limits</td>
+                        <td><strong>Below Detection</strong></td>
+                        <td><span class="status-pass"><i class="bi bi-check-circle-fill me-1"></i>Pass</span></td>
+                    </tr>
+                    <tr>
+                        <td>Residual Chlorine</td>
+                        <td>&lt; 0.2 mg/L</td>
+                        <td><strong>Nil</strong></td>
+                        <td><span class="status-pass"><i class="bi bi-check-circle-fill me-1"></i>Pass</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner section-padding">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="cta-title">Want Our Quality Reports?</h2>
+        <p class="cta-subtitle">Request laboratory test reports or certification documents by contacting our quality team.</p>
+        <a href="/contact" class="btn btn-cta-primary mt-3">Request Reports <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+</section>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

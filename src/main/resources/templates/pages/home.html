@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${pageTitle}, ${metaDescription})}"></head>
+<body>
+
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-bg-overlay"></div>
+    <div class="container position-relative">
+        <div class="row align-items-center min-vh-100-hero">
+            <div class="col-lg-6 hero-content" data-aos="fade-right">
+                <div class="hero-badge mb-3">
+                    <i class="bi bi-shield-check-fill me-1"></i> BIS Certified &bull; pH 8.5 &bull; Export Ready
+                </div>
+                <h1 class="hero-title">Hydration,<br/><span class="hero-title-accent">Elevated.</span></h1>
+                <p class="hero-subtitle">Pure Alkaline Water.</p>
+                <p class="hero-desc">Experience the difference of premium alkaline water crafted for your health. Sourced, purified, and sealed with care from the heart of Indore.</p>
+                <div class="hero-cta d-flex flex-wrap gap-3 mt-4">
+                    <a href="/products" class="btn btn-hero-primary">
+                        <i class="bi bi-bag-fill me-2"></i>Shop Now
+                    </a>
+                    <a href="/about" class="btn btn-hero-outline">
+                        <i class="bi bi-play-circle me-2"></i>Learn More
+                    </a>
+                </div>
+                <div class="hero-stats d-flex flex-wrap gap-4 mt-5">
+                    <div class="stat-item">
+                        <span class="stat-number">8.5</span>
+                        <span class="stat-label">pH Level</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">BIS Certified</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Harmful Additives</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center mt-5 mt-lg-0" data-aos="fade-left">
+                <div class="hero-bottle-wrapper">
+                    <div class="hero-bottle-glow"></div>
+                    <img th:src="@{/images/Gemini_Generated_Image_vh7820vh7820vh78-removebg-preview.png}"
+                         alt="Vica Hydrate Premium Alkaline Water Bottle"
+                         class="hero-bottle-img"/>
+                    <div class="hero-bottle-badge">
+                        <i class="bi bi-leaf-fill"></i>
+                        <span>Eco-Friendly<br/>Packaging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path fill="#ffffff" d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Features Strip -->
+<section class="features-strip py-4 bg-white">
+    <div class="container">
+        <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-3">
+                <div class="feature-pill d-flex align-items-center gap-2">
+                    <i class="bi bi-droplet-fill text-primary-custom"></i>
+                    <span>pH 8.5 Alkaline</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="feature-pill d-flex align-items-center gap-2">
+                    <i class="bi bi-shield-fill-check text-success-custom"></i>
+                    <span>BIS &amp; ISO Certified</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="feature-pill d-flex align-items-center gap-2">
+                    <i class="bi bi-recycle text-eco"></i>
+                    <span>100% Recyclable</span>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="feature-pill d-flex align-items-center gap-2">
+                    <i class="bi bi-globe-asia-australia text-primary-custom"></i>
+                    <span>Export Ready</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="about-image-wrap position-relative">
+                    <div class="about-image-bg-circle"></div>
+                    <img th:src="@{/images/Gemini_Generated_Image_vh7820vh7820vh78-removebg-preview.png}"
+                         alt="Vica Hydrate Bottle" class="about-main-img"/>
+                    <div class="about-cert-badge">
+                        <i class="bi bi-patch-check-fill"></i>
+                        <div>
+                            <strong>BIS Certified</strong>
+                            <small>Quality Assured</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="section-label">Our Story</div>
+                <h2 class="section-title">Born in Indore,<br/>Made for the World</h2>
+                <p class="section-text">Vica Hydrate is a premium alkaline water brand from Indore, Madhya Pradesh. We believe hydration is a fundamental right, and it should be pure, safe, and enriching.</p>
+                <p class="section-text">Our water undergoes a 12-stage purification process, enhanced with minerals to achieve a balanced pH of 8.5 — the optimal level for everyday hydration.</p>
+                <div class="values-grid mt-4">
+                    <div class="value-item">
+                        <i class="bi bi-droplet-half text-primary-custom"></i>
+                        <div>
+                            <strong>Purity First</strong>
+                            <small>12-stage filtration</small>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <i class="bi bi-leaf text-success-custom"></i>
+                        <div>
+                            <strong>Sustainable</strong>
+                            <small>Eco-friendly packaging</small>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <i class="bi bi-award text-warning-custom"></i>
+                        <div>
+                            <strong>Certified</strong>
+                            <small>BIS, ISO compliant</small>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <i class="bi bi-globe2 text-primary-custom"></i>
+                        <div>
+                            <strong>Export Ready</strong>
+                            <small>International standards</small>
+                        </div>
+                    </div>
+                </div>
+                <a href="/about" class="btn btn-primary-custom mt-4">Discover Our Story <i class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Preview -->
+<section class="section-padding bg-light-blue">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Our Range</div>
+            <h2 class="section-title">Choose Your Hydration</h2>
+            <p class="section-subtitle">Available in three sizes to suit every need — from on-the-go to family use.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <th:block th:each="product : ${featuredProducts}">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="product-card">
+                        <div class="product-card-top">
+                            <div class="product-size-badge" th:text="${product.sizeLabel}">500ml</div>
+                            <img th:src="@{/images/Gemini_Generated_Image_vh7820vh7820vh78-removebg-preview.png}"
+                                 th:alt="${product.name}" class="product-card-img"/>
+                        </div>
+                        <div class="product-card-body">
+                            <h3 class="product-name" th:text="${product.name}">Product Name</h3>
+                            <p class="product-desc" th:text="${product.description}">Description</p>
+                            <div class="product-price">
+                                <span class="price-currency">&#8377;</span>
+                                <span class="price-amount" th:text="${product.price}">25</span>
+                            </div>
+                            <a href="/products" class="btn btn-primary-custom w-100 mt-3">
+                                <i class="bi bi-bag-plus me-2"></i>Buy Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+        <div class="text-center mt-4">
+            <a href="/products" class="btn btn-outline-custom">View All Products <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Why Vica</div>
+            <h2 class="section-title">The Vica Hydrate Difference</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                <div class="why-card">
+                    <div class="why-icon-wrap">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                    </div>
+                    <h4>Health-First Formula</h4>
+                    <p>Our pH 8.5 alkaline water helps neutralize acidity and supports optimal body function, immunity, and energy levels.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-card">
+                    <div class="why-icon-wrap">
+                        <i class="bi bi-shield-check-fill"></i>
+                    </div>
+                    <h4>Tamper-Proof Guarantee</h4>
+                    <p>Every bottle features a tamper-evident seal ensuring the water you drink is exactly as pure as we packaged it.</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="why-card">
+                    <div class="why-icon-wrap">
+                        <i class="bi bi-recycle"></i>
+                    </div>
+                    <h4>Planet-Conscious Packaging</h4>
+                    <p>100% recyclable BPA-free PET bottles. We are committed to reducing plastic waste and our carbon footprint.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner section-padding">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="cta-title">Ready to Elevate Your Hydration?</h2>
+        <p class="cta-subtitle">Join thousands of health-conscious individuals who have made Vica Hydrate their daily choice.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+            <a href="/products" class="btn btn-cta-primary">Shop Now <i class="bi bi-arrow-right ms-1"></i></a>
+            <a href="/contact" class="btn btn-cta-outline">Get a Quote</a>
+        </div>
+    </div>
+</section>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>

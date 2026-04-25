@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(pageTitle, metaDescription)">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Vica Hydrate"/>
+    <meta name="keywords" content="alkaline water, premium water, BIS certified water, Indore water brand, pH 8.5 water, Vica Hydrate"/>
+    <title th:text="${pageTitle}">Vica Hydrate</title>
+    <meta name="description" th:content="${metaDescription}"/>
+
+    <!-- Open Graph -->
+    <meta property="og:title" th:content="${pageTitle}"/>
+    <meta property="og:description" th:content="${metaDescription}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="/images/LOGO_white_(3).png"/>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <link rel="icon" type="image/png" th:href="@{/images/LOGO_white_(3).png}"/>
+</head>
+
+<nav th:fragment="navbar" class="navbar navbar-expand-lg sticky-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+            <img th:src="@{/images/LOGO_white_(3).png}" alt="Vica Hydrate Logo" height="44" class="navbar-logo"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${#httpServletRequest.requestURI == '/' ? 'active' : ''}" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${#httpServletRequest.requestURI == '/about' ? 'active' : ''}" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${#httpServletRequest.requestURI == '/products' ? 'active' : ''}" href="/products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:classappend="${#httpServletRequest.requestURI == '/compliance' ? 'active' : ''}" href="/compliance">Quality &amp; Compliance</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                    <a class="btn btn-primary-custom" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<footer th:fragment="footer">
+    <div class="footer-main py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img th:src="@{/images/LOGO_white_(3).png}" alt="Vica Hydrate" height="50" class="mb-3"/>
+                    <p class="footer-tagline">Hydration, Elevated. Pure Alkaline Water.</p>
+                    <p class="footer-text">Premium pH 8.5 alkaline water crafted with care in Indore, India. BIS certified, export-ready, and committed to your health.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Twitter/X" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-heading">Quick Links</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/compliance">Quality</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Our Products</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="/products">Vica Hydrate 500ml</a></li>
+                        <li><a href="/products">Vica Hydrate 1L</a></li>
+                        <li><a href="/products">Vica Hydrate 2L</a></li>
+                        <li><a href="/compliance">BIS Certification</a></li>
+                        <li><a href="/compliance">Quality Standards</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-heading">Contact</h6>
+                    <ul class="footer-contact list-unstyled">
+                        <li>
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            <span>Indore, Madhya Pradesh, India</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            <a href="tel:+919174466929">+91 91744 66929</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            <a href="mailto:info@vicahydrate.in">info@vicahydrate.in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom py-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <p class="mb-0 small">&copy; 2024 Vica Hydrate. All rights reserved. | VICA TWAIN - ZIANI CABRAL PVT. LTD.</p>
+            <p class="mb-0 small">Made with <i class="bi bi-heart-fill text-danger"></i> in Indore, India</p>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head(${pageTitle}, ${metaDescription})}"></head>
+<body>
+
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="hero-badge mb-3"><i class="bi bi-house-heart-fill me-1"></i> About Vica Hydrate</div>
+                <h1 class="page-hero-title">Our Story</h1>
+                <p class="page-hero-subtitle">From the heart of Indore to tables across India and beyond — we are on a mission to make premium alkaline hydration accessible to all.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Story Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="section-label">The Beginning</div>
+                <h2 class="section-title">A Vision Born from Purpose</h2>
+                <p class="section-text">Vica Hydrate was founded with a singular vision: to provide India with access to pure, healthy, and responsibly-packaged alkaline water. Our founders witnessed a growing disconnect between the water people drank and the health they deserved.</p>
+                <p class="section-text">Headquartered in Indore — India's cleanest city — Vica Hydrate operates under <strong>VICA TWAIN - ZIANI CABRAL PVT. LTD.</strong> We set out to create a water brand that stood for more than just hydration. We built a brand that stands for trust, health, and environmental responsibility.</p>
+                <p class="section-text">Today, Vica Hydrate is BIS-certified, ISO-compliant, and export-ready — serving health-conscious consumers and institutions across India and internationally.</p>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left">
+                <div class="story-img-wrap">
+                    <img th:src="@{/images/Gemini_Generated_Image_vh7820vh7820vh78-removebg-preview.png}"
+                         alt="Vica Hydrate Bottle" class="story-img"/>
+                    <div class="story-overlay-card">
+                        <i class="bi bi-building-fill-check text-primary-custom fs-3 mb-2"></i>
+                        <strong>Est. in Indore</strong>
+                        <small>Madhya Pradesh, India</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="section-padding bg-light-blue">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">Our Purpose</div>
+            <h2 class="section-title">Mission &amp; Vision</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To deliver health, trust, and eco-conscious hydration to every household, institution, and market we serve. We are committed to producing water of uncompromising purity in packaging that respects the planet — making every sip a step towards better health and a better world.</p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="mission-card mission-card-alt">
+                    <div class="mission-icon">
+                        <i class="bi bi-eye-fill"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become India's most trusted and recognized premium alkaline water brand, known globally for quality, sustainability, and innovation. We envision a future where clean, alkaline water is not a luxury, but a standard for every Indian household.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <div class="section-label">What We Stand For</div>
+            <h2 class="section-title">Our Core Values</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="value-card">
+                    <div class="value-icon-lg"><i class="bi bi-droplet-fill"></i></div>
+                    <h4>Purity</h4>
+                    <p>12-stage purification ensures every drop meets the highest quality standards. No compromises.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="value-card">
+                    <div class="value-icon-lg"><i class="bi bi-leaf-fill"></i></div>
+                    <h4>Sustainability</h4>
+                    <p>100% recyclable, BPA-free packaging and responsible manufacturing practices for a greener tomorrow.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="value-card">
+                    <div class="value-icon-lg"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+                    <h4>Trust</h4>
+                    <p>Fully transparent about our processes, certifications, and ingredients. What you see is what you get.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="value-card">
+                    <div class="value-icon-lg"><i class="bi bi-lightbulb-fill"></i></div>
+                    <h4>Innovation</h4>
+                    <p>Continuously improving our formulas, packaging, and processes to stay at the frontier of water technology.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sustainability Commitment -->
+<section class="section-padding bg-eco">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="section-label text-white opacity-75">Environmental Commitment</div>
+                <h2 class="section-title text-white">Sustainable by Design</h2>
+                <p class="text-white opacity-85 mb-4">At Vica Hydrate, sustainability is not an afterthought — it is built into every decision we make, from bottle design to supply chain management.</p>
+                <div class="eco-points">
+                    <div class="eco-point d-flex align-items-start gap-3 mb-3">
+                        <i class="bi bi-check-circle-fill text-white mt-1"></i>
+                        <div>
+                            <strong class="text-white">BPA-Free PET Bottles</strong>
+                            <p class="text-white opacity-75 mb-0 small">All our bottles are manufactured from food-grade, BPA-free PET plastic that is 100% recyclable.</p>
+                        </div>
+                    </div>
+                    <div class="eco-point d-flex align-items-start gap-3 mb-3">
+                        <i class="bi bi-check-circle-fill text-white mt-1"></i>
+                        <div>
+                            <strong class="text-white">Reduced Carbon Footprint</strong>
+                            <p class="text-white opacity-75 mb-0 small">Our production facility uses energy-efficient processes and we are working towards renewable energy integration.</p>
+                        </div>
+                    </div>
+                    <div class="eco-point d-flex align-items-start gap-3 mb-3">
+                        <i class="bi bi-check-circle-fill text-white mt-1"></i>
+                        <div>
+                            <strong class="text-white">Minimal Packaging Waste</strong>
+                            <p class="text-white opacity-75 mb-0 small">Our packaging design minimizes material usage while maintaining structural integrity and product safety.</p>
+                        </div>
+                    </div>
+                    <div class="eco-point d-flex align-items-start gap-3">
+                        <i class="bi bi-check-circle-fill text-white mt-1"></i>
+                        <div>
+                            <strong class="text-white">Eco-Label Certified</strong>
+                            <p class="text-white opacity-75 mb-0 small">We carry eco-label certification recognizing our commitment to environmentally responsible manufacturing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left">
+                <div class="eco-stats-grid">
+                    <div class="eco-stat">
+                        <div class="eco-stat-icon"><i class="bi bi-recycle"></i></div>
+                        <strong>100%</strong>
+                        <span>Recyclable</span>
+                    </div>
+                    <div class="eco-stat">
+                        <div class="eco-stat-icon"><i class="bi bi-droplet"></i></div>
+                        <strong>Zero</strong>
+                        <span>BPA Content</span>
+                    </div>
+                    <div class="eco-stat">
+                        <div class="eco-stat-icon"><i class="bi bi-shield-check"></i></div>
+                        <strong>BIS</strong>
+                        <span>Certified</span>
+                    </div>
+                    <div class="eco-stat">
+                        <div class="eco-stat-icon"><i class="bi bi-globe-asia-australia"></i></div>
+                        <strong>Export</strong>
+                        <span>Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner section-padding">
+    <div class="container text-center" data-aos="fade-up">
+        <h2 class="cta-title">Want to Know More?</h2>
+        <p class="cta-subtitle">Reach out to us for bulk orders, partnerships, or general enquiries.</p>
+        <a href="/contact" class="btn btn-cta-primary mt-3">Get in Touch <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+</section>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
