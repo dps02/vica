@@ -79,9 +79,9 @@
                             <div class="product-features">
                                 <h6 class="features-title">Key Features</h6>
                                 <ul class="features-list list-unstyled">
-                                    <li th:each="feature : ${product.features}" class="feature-item">
+                                    <li th:each="feature : ${#strings.arraySplit(product.features, '|')}" class="feature-item">
                                         <i class="bi bi-check-circle-fill text-success-custom me-2"></i>
-                                        <span th:text="${feature}">Feature</span>
+                                        <span th:text="${#strings.trim(feature)}">Feature</span>
                                     </li>
                                 </ul>
                             </div>

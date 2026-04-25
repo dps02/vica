@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "inquiries")
@@ -24,12 +24,12 @@ public class Inquiry {
 
     private String phone;
 
-    @Column(columnDefinition = "text", nullable = false)
+    @Column(columnDefinition = "LONGTEXT", nullable = false)
     private String message;
 
     @Column(nullable = false)
     private String status = "new";
 
-    @Column(name = "created_at")
-    private OffsetDateTime createdAt;
+    @Column(name = "created_at", columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
+    private LocalDateTime createdAt;
 }

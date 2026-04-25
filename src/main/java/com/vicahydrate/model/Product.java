@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "products")
@@ -26,11 +26,11 @@ public class Product {
     @Column(nullable = false)
     private BigDecimal price;
 
-    @Column(columnDefinition = "text")
+    @Column(columnDefinition = "LONGTEXT")
     private String description;
 
-    @Column(name = "features", columnDefinition = "text[]")
-    private String[] features;
+    @Column(name = "features", columnDefinition = "LONGTEXT")
+    private String features;
 
     @Column(name = "image_url")
     private String imageUrl;
@@ -38,8 +38,8 @@ public class Product {
     @Column(name = "in_stock")
     private Boolean inStock = true;
 
-    @Column(name = "created_at")
-    private OffsetDateTime createdAt;
+    @Column(name = "created_at", columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
+    private LocalDateTime createdAt;
 
     public String getSizeLabel() {
         if (sizeMl >= 1000) {
