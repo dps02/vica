@@ -1,51 +1,25 @@
 package com.vicahydrate.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "products")
+@Table(name = "products") // Maps the class to your MySQL table name
 @Data
-@NoArgsConstructor
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id; // Or Long, depending on your DB schema
 
-    @Column(nullable = false)
     private String name;
-
-    @Column(name = "size_ml", nullable = false)
-    private Integer sizeMl;
-
-    @Column(nullable = false)
-    private BigDecimal price;
-
-    @Column(columnDefinition = "LONGTEXT")
     private String description;
-
-    @Column(name = "features", columnDefinition = "LONGTEXT")
+    private String sizeLabel;
     private String features;
-
-    @Column(name = "image_url")
-    private String imageUrl;
-
-    @Column(name = "in_stock")
-    private Boolean inStock = true;
-
-    @Column(name = "created_at", columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
-    private LocalDateTime createdAt;
-
-    public String getSizeLabel() {
-        if (sizeMl >= 1000) {
-            int litres = sizeMl / 1000;
-            return litres + "L";
-        }
-        return sizeMl + "ml";
-    }
+    private double price;
+    private boolean inStock;
 }

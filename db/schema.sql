@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS products (
   id BIGINT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   size_ml INT NOT NULL,
-  price DECIMAL(10,2) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,mysmy
   description LONGTEXT DEFAULT '',
   features LONGTEXT DEFAULT '',
   image_url VARCHAR(500) DEFAULT '',
@@ -35,7 +35,7 @@ INSERT INTO products (name, size_ml, price, description, features, image_url, in
   500,
   25.00,
   'Perfect for on-the-go hydration. Our 500ml bottle delivers pH 8.5 alkaline water in a compact, tamper-proof, BPA-free bottle.',
-  'pH 8.5 Alkaline|Tamper-Proof Seal|BPA-Free|Recyclable PET|BIS Certified',
+  
   '/images/bottle.png',
   true
 ),

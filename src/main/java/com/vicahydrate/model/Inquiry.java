@@ -32,4 +32,35 @@ public class Inquiry {
 
     @Column(name = "created_at", columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime createdAt;
+
+
+	public void setName(Object name2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setEmail(Object email2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setMessage(Object message2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setStatus(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setPhone(Object phone2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

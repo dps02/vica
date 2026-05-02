@@ -21,4 +21,24 @@ public class InquiryRequest {
     @NotBlank(message = "Message is required")
     @Size(min = 10, max = 2000, message = "Message must be between 10 and 2000 characters")
     private String message;
+
+	public Object getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getEmail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getPhone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -7,10 +7,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
 public class InquiryService {
 
     private final InquiryRepository inquiryRepository;
+
+    public InquiryService(InquiryRepository inquiryRepository) {
+        this.inquiryRepository = inquiryRepository;
+    }
 
     public Inquiry submitInquiry(InquiryRequest request) {
         Inquiry inquiry = new Inquiry();

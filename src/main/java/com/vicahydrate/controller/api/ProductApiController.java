@@ -13,17 +13,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductApiController {
 
-    private final ProductService productService;
+    private final ProductService productService = new ProductService(null);
 
     @GetMapping
     public ResponseEntity<List<Product>> getAllProducts() {
         return ResponseEntity.ok(productService.getAllAvailableProducts());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Product> getProduct(@PathVariable Long id) {
-        return productService.getProductById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
+    
 }
